@@ -3,7 +3,7 @@ import { Text, StyleSheet } from "react-native";
 
 const HomeScreen = () => {
   return (
-  <Text style={styles.text}>Yooooo Bout to Build some Mobile Apps</Text>
+  <Text style={styles.text}>Mobile Apps Here</Text>
   );
 };
 
