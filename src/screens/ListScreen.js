@@ -21,15 +21,21 @@ const ListScreen = () => {
         // }}/> */}
         // {/* <Text>List Screen</Text> */}
             <FlatList 
+                keyExtractor={(friend) => friend.name}
                 data={friends} 
                 renderItem={({item}) => {
                     // This uses desctrocturing to get the item
-                    return <Text>{item.name}</Text> 
+                    return <Text style={styles.coolTextStyle}>{item.name}</Text> 
             }}/>
     )
     
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    // This could be named anything
+    coolTextStyle: {
+        marginVertical: 50
+    }
+});
 
 export default ListScreen;
