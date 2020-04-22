@@ -19,10 +19,16 @@ const ListScreen = () => {
         // {/* <FlatList data={friends} renderItem={(element) => {
             //     Element === {item: {name:"Friend#1", index:0}}
         // }}/> */}
-        // {/* <Text>List Screen</Text> */}
+        // Flatlist is kind of like for mapping through an array
             <FlatList 
+                horizontal = {true}
+                // This makes everything scrollable horizontally instead of the default vertical order
+                showsHorizontalScrollIndicator = {false}
+                // Takes care of the horizontal scrollbar
                 keyExtractor={(friend) => friend.name}
+                // Takes care of the key warning
                 data={friends} 
+                // Both data and renderItem are required props for FlatList
                 renderItem={({item}) => {
                     // This uses desctrocturing to get the item
                     return <Text style={styles.coolTextStyle}>{item.name}</Text> 
