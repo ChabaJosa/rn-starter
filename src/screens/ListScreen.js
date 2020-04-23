@@ -40,7 +40,7 @@ const ListScreen = () => {
 const styles = StyleSheet.create({
     // This could be named anything
     coolTextStyle: {
-        marginVertical: 50,
+        marginVertical: 10,
         paddingVertical: 8,
         borderWidth: 4,
         borderColor: "#20232a",
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#61dafb",
         color: "#20232a",
         textAlign: "center",
-        // fontSize: 30,
+        // fontSize: 25,
         fontWeight: "bold"    
     }
 });

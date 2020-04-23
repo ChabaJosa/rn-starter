@@ -5,15 +5,20 @@ const ComponentsScreen = () => {
 
     const name = "Chaba"
 
-    return  <View>
-                <Text style={styles.textStyle}>Getting started with React Native!</Text>
-                <Text>My name is {name}</Text>
+    return  <View style={styles.container}>
+                <Text style={styles.textStyle}>Who am I?</Text>
+                <Text>My name is {name} and I'm a Software Engineer</Text>
             </View>
 }
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 24
+      },
     textStyle: {
-        fontSize:30
+        fontSize:30,
+        marginVertical:10
     }
 })
 
