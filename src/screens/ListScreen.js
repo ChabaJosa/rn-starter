@@ -4,14 +4,14 @@ import {Text, StyleSheet, FlatList, View} from "react-native"
 const ListScreen = () => {
 
     const friends = [
-    {name:"Mick Jager"},
-    {name:"Gene Simmons"},
-    {name:"Bon Jovi"},
-    {name:"Bruce Springsteen"},
-    {name:"David Bowie"},
-    {name:"Fred Mercury"},
-    {name:"Dave Grohl"},
-    {name:"Steve Vai"}
+    {name:"Mick Jager", age:"Old"},
+    {name:"Gene Simmons", age:"Old"},
+    {name:"Bon Jovi", age:"Old"},
+    {name:"Bruce Springsteen", age:"Old"},
+    {name:"David Bowie", age:"Old"},
+    {name:"Fred Mercury", age:"Old"},
+    {name:"Dave Grohl", age:"Old"},
+    {name:"Steve Vai", age:"Old"}
     ]
 
     return ( 
@@ -21,7 +21,7 @@ const ListScreen = () => {
         // }}/> */}
         // Flatlist is kind of like for mapping through an array
             <FlatList 
-                horizontal = {true}
+                horizontal = {false}
                 // This makes everything scrollable horizontally instead of the default vertical order
                 showsHorizontalScrollIndicator = {false}
                 // Takes care of the horizontal scrollbar
@@ -31,7 +31,7 @@ const ListScreen = () => {
                 // Both data and renderItem are required props for FlatList
                 renderItem={({item}) => {
                     // This uses desctrocturing to get the item
-                    return <Text style={styles.coolTextStyle}>{item.name}</Text> 
+                return <Text style={styles.coolTextStyle}>{item.name} - Age:{item.age}</Text> 
             }}/>
     )
     
@@ -40,7 +40,16 @@ const ListScreen = () => {
 const styles = StyleSheet.create({
     // This could be named anything
     coolTextStyle: {
-        marginVertical: 50
+        marginVertical: 50,
+        paddingVertical: 8,
+        borderWidth: 4,
+        borderColor: "#20232a",
+        borderRadius: 6,
+        backgroundColor: "#61dafb",
+        color: "#20232a",
+        textAlign: "center",
+        // fontSize: 30,
+        fontWeight: "bold"    
     }
 });
 
