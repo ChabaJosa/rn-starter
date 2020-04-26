@@ -6,10 +6,10 @@ const ImageScreen = () => {
     return (
     
     <View>
-        <ImageDetail   title="Forest Gump"              />
-        <ImageDetail   title="Shawshank Redemption"     />
-        <ImageDetail   title="Fight Club"               />
-        <ImageDetail   title="Basic Instinct"           />
+        <ImageDetail   title="Forest Gump"           imageSource={require("../../assets/forrest_gump.jpg")}             />
+        <ImageDetail   title="Shawshank Redemption"  imageSource={require("../../assets/shawshank-redemption.jpg")}     />
+        <ImageDetail   title="Fight Club"            imageSource={require("../../assets/fight_club.jpg")}               />
+        <ImageDetail   title="Basic Instinct"        imageSource={require("../../assets/basic_instinct.jpg")}           />
     </View>
    
     )
