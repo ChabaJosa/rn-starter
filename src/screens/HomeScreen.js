@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, Button, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, View, Button } from "react-native";
 
 const HomeScreen = ({ navigation }) => {
   // console.log(props)
@@ -7,25 +7,37 @@ const HomeScreen = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.text}>Mobile Apps Here</Text>
       <Button 
-      title="Built by..." 
-      onPress={() => navigation.navigate("Components")}
+        title="Built by..." 
+        onPress={() => navigation.navigate("Components")}
       />
 
       <Button 
       // style={styles.buttonText} // This doesn't work
-      title="Get some rockstars"
-      onPress={() => navigation.navigate("List")} 
+        title="Rockstars"
+        onPress={() => navigation.navigate("List")} 
       />
 
       <Button 
-      title="Go to Image"
-      onPress={() => navigation.navigate("Image")} 
+        title="90's Film Images"
+        onPress={() => navigation.navigate("Image")} 
       />
 
       <Button 
-      title="Counter"
-      onPress={() => navigation.navigate("Counter")} 
+        title="Counter"
+        onPress={() => navigation.navigate("Counter")} 
       />
+
+      <Button 
+        title="Color"
+        onPress={() => navigation.navigate("Color")} 
+      />
+
+      <Button  
+        title="RGB Square"
+        onPress={() => navigation.navigate("Square")} 
+      />
+
+
 
     </View>
   );

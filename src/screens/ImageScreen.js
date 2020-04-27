@@ -1,5 +1,5 @@
 import React from "react"
-import {Text, StyleSheet, FlatList, View} from "react-native"
+import {Text, StyleSheet, View} from "react-native"
 import ImageDetail from "../components/ImageDetail"
 
 const ImageScreen = () => {

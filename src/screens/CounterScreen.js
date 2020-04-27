@@ -7,7 +7,7 @@ const CounterScreen = () => {
 
     return (
         <View>
-            
+
             <Button
                 title="Increase"
                 onPress={() => setCounter(counter+1)}
@@ -24,3 +24,6 @@ const CounterScreen = () => {
 };
 
 export default CounterScreen;
+
+
+

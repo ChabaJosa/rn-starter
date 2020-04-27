@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 8048,
-  "expoServerNgrokUrl": "https://tj-a3b.anonymous.rn-starter.exp.direct",
-  "packagerNgrokUrl": "https://packager.tj-a3b.anonymous.rn-starter.exp.direct",
-  "ngrokPid": 10224
+  "packagerPort": 19003,
+  "packagerPid": 14864,
+  "expoServerNgrokUrl": "https://cg-zx6.anonymous.rn-starter.exp.direct",
+  "packagerNgrokUrl": "https://packager.cg-zx6.anonymous.rn-starter.exp.direct",
+  "ngrokPid": 4148
 }
