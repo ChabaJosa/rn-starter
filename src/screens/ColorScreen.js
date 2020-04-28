@@ -26,7 +26,6 @@ const colorScreen = () => {
             />
            
             
-            {/* <View style={{height:100, width: 100, backgroundColor: randomRGB()}}/> */}
 
             <FlatList
                 keyExtractor    = {item => item }
@@ -44,7 +43,8 @@ const colorScreen = () => {
 
 const styles = StyleSheet.create({
     container:{
-        paddingTop:50
+        paddingTop:50,
+        alignItems:"center"
     }
 })
 

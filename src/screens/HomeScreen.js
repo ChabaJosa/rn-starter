@@ -23,12 +23,12 @@ const HomeScreen = ({ navigation }) => {
       />
 
       <Button 
-        title="Counter"
+        title="Counter with Hooks"
         onPress={() => navigation.navigate("Counter")} 
       />
 
       <Button 
-        title="Color"
+        title="Infinite Color Column"
         onPress={() => navigation.navigate("Color")} 
       />
 
