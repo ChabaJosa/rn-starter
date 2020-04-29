@@ -19,20 +19,21 @@ const SquareScreen = () => {
                 // Btw the functions below can be named anything because they are props,
                 // They are only here tu be used in a child component
                 // Unlike onPress() which is a built in method
-                onIncrease={ () => setRed(red + 1)}
-                onDecrease={ () => setRed(red - 1)}                 
+                onIncrease={ () => setRed(red + 15)}
+                onDecrease={ () => setRed(red - 15)}                 
                 color="Red"
             />
             <ColorCounter 
-                onIncrease={ () => setBlue(blue + 1)}
-                onDecrease={ () => setBlue(blue - 1)}                
+                onIncrease={ () => setBlue(blue + 15)}
+                onDecrease={ () => setBlue(blue - 15)}                
                 color="Blue"
             />
             <ColorCounter 
-                onIncrease={ () => setGreen(green + 1)}
-                onDecrease={ () => setGreen(green - 1)}               
+                onIncrease={ () => setGreen(green + 15)}
+                onDecrease={ () => setGreen(green - 15)}               
                 color="Green"
             />
+            <View style={{ height: 150, width: 150, backgroundColor: `rgb(${red}, ${green}, ${blue})`}}/>
        
         </View>
     );
