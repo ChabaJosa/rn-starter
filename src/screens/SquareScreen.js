@@ -16,15 +16,24 @@ const SquareScreen = () => {
         // action === {colorToChange: "red" || "green" || "blue", amount: 15 || -15}
 
         switch (action.colorToChange){
+
             case "red":
-                return {...state, red: state.red        + action.amount}
+                return state.red + action.amount > 255 || state.red + action.amount < 0 
+                    ? state     // State is always require to be returned with a reducer
+                    : {...state, red: state.red + action.amount};
+
             case "green":
-                return {...state, green: state.green    + action.amount}
+                return state.green + action.amount > 255 || state.green + action.amount < 0 
+                    ? state     // State is always require to be returned with a reducer
+                    : {...state, green: state.green + action.amount};
+
             case "blue":
-                return {...state, blue: state.blue      + action.amount}
+                return state.blue + action.amount > 255 || state.blue + action.amount < 0 
+                    ? state     // State is always require to be returned with a reducer
+                    : {...state, blue: state.blue + action.amount};
 
             default:
-                return state;
+                return state;   // State is always require to be returned with a reducer
 
         }
     }
@@ -40,7 +49,6 @@ const SquareScreen = () => {
 
 
     return (
-        // <ScrollView>
 
         <View style={styles.container}>
 
@@ -69,7 +77,6 @@ const SquareScreen = () => {
        
         </View>
 
-        // {/* </ScrollView> */}
 
     );
 };
