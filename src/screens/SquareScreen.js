@@ -1,5 +1,5 @@
 import React, {useReducer} from 'react';
-import {View, Text, Button, StyleSheet, ScrollView} from "react-native"
+import {View, Text, StyleSheet} from "react-native"
 import ColorCounter from "../components/ColorCounter"
 
 const COLOR_INCREMENT = 15
@@ -13,28 +13,29 @@ const SquareScreen = () => {
 
     const  reducer = (state, action) => {
         // state === {"red": 0 , "green":0, "blue": 0}
-        // action === {colorToChange: "red" || "green" || "blue", amount: 15 || -15}
+        // Not Conventional: action === {colorToChange: "red" || "green" || "blue", amount: 15 || -15}
+        // Standard: action === {type: "change_red" || "change_green" || "change_blue", payload: 15 || -15 }
 
-        switch (action.colorToChange){
+        switch (action.type){
 
-            case "red":
-                return state.red + action.amount > 255 || state.red + action.amount < 0 
+            case "change_red":
+                return state.red + action.payload > 255 || state.red + action.payload < 0  
                     ? state     // State is always require to be returned with a reducer
-                    : {...state, red: state.red + action.amount};
+                    : {...state, red: state.red + action.payload};
 
-            case "green":
-                return state.green + action.amount > 255 || state.green + action.amount < 0 
+            case "change_green":
+                return state.green + action.payload > 255 || state.green + action.payload < 0 
                     ? state     // State is always require to be returned with a reducer
-                    : {...state, green: state.green + action.amount};
+                    : {...state, green: state.green + action.payload};
 
-            case "blue":
-                return state.blue + action.amount > 255 || state.blue + action.amount < 0 
+            case "change_blue":
+                // console.log("this joint is workin")
+                return state.blue + action.payload > 255 || state.blue + action.payload < 0 
                     ? state     // State is always require to be returned with a reducer
-                    : {...state, blue: state.blue + action.amount};
+                    : {...state, blue: state.blue + action.payload};
 
             default:
                 return state;   // State is always require to be returned with a reducer
-
         }
     }
 
@@ -56,18 +57,18 @@ const SquareScreen = () => {
                 // Btw the functions below can be named anything because they are props,
                 // They are only here tu be used in a child component
                 // Unlike onPress() which is a built in method
-                onIncrease={ () =>  dispatch({colorToChange:"red"   ,amount: COLOR_INCREMENT    })}
-                onDecrease={ () =>  dispatch({colorToChange:"red"   ,amount: -1*COLOR_INCREMENT })}            
+                onIncrease={ () =>  dispatch({type:"change_red"   ,payload: COLOR_INCREMENT    })}
+                onDecrease={ () =>  dispatch({type:"change_red"   ,payload: -1*COLOR_INCREMENT })}            
                 color="Red"
             />
             <ColorCounter 
-                onIncrease={ () =>  dispatch({colorToChange:"green"  ,amount: COLOR_INCREMENT    })}
-                onDecrease={ () =>  dispatch({colorToChange:"green"  ,amount: -1*COLOR_INCREMENT })}  
+                onIncrease={ () =>  dispatch({type:"change_green"  ,payload: COLOR_INCREMENT    })}
+                onDecrease={ () =>  dispatch({type:"change_green"  ,payload: -1*COLOR_INCREMENT })}  
                 color="Green"
             />
             <ColorCounter 
-                onIncrease={ () =>  dispatch({colorToChange:"blue"   ,amount: COLOR_INCREMENT    })}
-                onDecrease={ () =>  dispatch({colorToChange:"blue"   ,amount: -1*COLOR_INCREMENT })}  
+                onIncrease={ () =>  dispatch({type:"change_blue"   ,payload: COLOR_INCREMENT    })}
+                onDecrease={ () =>  dispatch({type:"change_blue"   ,payload: -1*COLOR_INCREMENT })}  
                 color="Blue"
             />
             <View style={styles.box}>

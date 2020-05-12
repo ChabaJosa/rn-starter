@@ -25,7 +25,6 @@ const colorScreen = () => {
                 }}
             />
            
-            
 
             <FlatList
                 keyExtractor    = {item => item }
